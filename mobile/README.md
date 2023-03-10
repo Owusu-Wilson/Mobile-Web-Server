@@ -1,6 +1,8 @@
-# Template Bottom tabs
+# Mobile Web Server
 
-Template starter with React Navigation Bottom Tabs
+Serve Simple daat collection web pages on an Intranet.
+Useful in conferences to receive confidential requests and questions.
+NO data charges will be encountered because its on a local network.
 
 # Preview
 
