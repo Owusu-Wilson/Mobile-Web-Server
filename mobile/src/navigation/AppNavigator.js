@@ -6,16 +6,13 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Text, themeColor, useTheme } from "react-native-rapi-ui";
 import TabBarIcon from "../components/utils/TabBarIcon";
 import TabBarText from "../components/utils/TabBarText";
-import { EvilIcons, MaterialIcons } from "@expo/vector-icons";
-import { TouchableOpacity } from "react-native";
-// import Home from "../screens/Home";
-import HomeStack from "./HomeStack";
-import LocalServer from "../screens/LocalServer";
-import SecondScreen from "../screens/SecondScreen";
-import About from "../screens/About";
-import Profile from "../screens/Profile";
 
-import { HeaderIcon, HeaderTitle } from "../components/Header";
+import HomeStack from "./HomeStack";
+
+import About from "../screens/About";
+import Responses from "../screens/Responses";
+
+import { HeaderIcon, HeaderLeftIcon, HeaderTitle } from "../components/Header";
 
 import { useRoute } from "@react-navigation/native";
 
@@ -28,7 +25,6 @@ const Main = () => {
       }}
     >
       <MainStack.Screen name="MainTabs" component={MainTabs} />
-      {/* <MainStack.Screen name="LocalServer" component={LocalServer} /> */}
     </MainStack.Navigator>
   );
 };
@@ -42,6 +38,10 @@ const MainTabs = () => {
       screenOptions={{
         headerShadowVisible: false,
         headerRight: () => <HeaderIcon />,
+        headerLeft: () => <HeaderLeftIcon />,
+        // headerLeftContainerStyle: { paddingLeft: 10 },
+        headerRightContainerStyle: { paddingRight: 10 },
+        headerTitleAlign: "center",
         headerTitle: () => <HeaderTitle screenName={route.name} />,
         headerStyle: {
           backgroundColor: isDarkmode
@@ -70,14 +70,14 @@ const MainTabs = () => {
         }}
       />
       <Tabs.Screen
-        name="Profile"
-        component={Profile}
+        name="Responses"
+        component={Responses}
         options={{
           tabBarLabel: ({ focused }) => (
-            <TabBarText focused={focused} title="Profile" />
+            <TabBarText focused={focused} title="Responses" />
           ),
           tabBarIcon: ({ focused }) => (
-            <TabBarIcon focused={focused} icon={"person"} />
+            <TabBarIcon focused={focused} icon={"chatbox-ellipses"} />
           ),
         }}
       />

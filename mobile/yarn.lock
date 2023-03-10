@@ -3253,6 +3253,11 @@ expo-modules-core@1.2.4:
     compare-versions "^3.4.0"
     invariant "^2.2.4"
 
+expo-network@~5.2.1:
+  version "5.2.1"
+  resolved "https://registry.yarnpkg.com/expo-network/-/expo-network-5.2.1.tgz#09b5858c7ae228fc20669c1eb2f263fa6cd57a38"
+  integrity sha512-AqcQy6HiKwwWHGm87n3aEpGj2LFikT4warCjBJro5pk39AYMLEA+7oQ/Z+tNCOZW6ZFUe7BebEC3yGY98mcSyg==
+
 expo-status-bar@~1.4.4:
   version "1.4.4"
   resolved "https://registry.yarnpkg.com/expo-status-bar/-/expo-status-bar-1.4.4.tgz#6874ccfda5a270d66f123a9f220735a76692d114"
@@ -5765,6 +5770,11 @@ react-native-network-info@^5.2.1:
   resolved "https://registry.yarnpkg.com/react-native-network-info/-/react-native-network-info-5.2.1.tgz#b701f10d4ed1aeadcfe77b197328d1ae846f6d3a"
   integrity sha512-iam74xXtrSqqZurCl1/bSjZ9jXcsJY84g7brx1/4uVGCY26c6m+4CArHNSHOsz5ATg2NQT+81sjNy0KlCPyK4g==
 
+react-native-public-ip@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/react-native-public-ip/-/react-native-public-ip-1.0.2.tgz#3ce67cbfafdd5b8799e5b669e92351db0cc06102"
+  integrity sha512-GElvYvHLo/BCRFlXARBTq9Dwx526d1zxnyqlSfp1RQwA1yAucFbabfm6nAA3c2Nnq2OdfL4dbFGSeArM2Hdr2g==
+
 react-native-qrcode-svg@^6.2.0:
   version "6.2.0"
   resolved "https://registry.yarnpkg.com/react-native-qrcode-svg/-/react-native-qrcode-svg-6.2.0.tgz#62b62c5997ff23ba22544e289a6112a08f8ea306"
@@ -5790,6 +5800,11 @@ react-native-screens@~3.20.0:
   dependencies:
     react-freeze "^1.0.0"
     warn-once "^0.1.0"
+
+react-native-static-server@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/react-native-static-server/-/react-native-static-server-0.5.0.tgz#4b396082bfe7dfdbba6fe7d7de894de5ba4ebadb"
+  integrity sha512-RGteckPoBZq48p9Y8V67bjZGPxLHKkEOAffLSUJiGC7hkx+H+zuekqCR+04F30NuWB7y+nb8N7Qld2RGjX5DNg==
 
 react-native-svg@13.4.0:
   version "13.4.0"

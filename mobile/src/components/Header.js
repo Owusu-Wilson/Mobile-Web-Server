@@ -18,6 +18,7 @@ import {
 } from "react-native-rapi-ui";
 import { EvilIcons, MaterialIcons } from "@expo/vector-icons";
 import { TouchableOpacity } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 const HEIGHT = Dimensions.get("window").height;
 const WIDTH = Dimensions.get("window").width;
@@ -51,7 +52,7 @@ const HeaderTitle = ({ screenName }) => {
   );
 };
 
-const HeaderIcon = () => {
+const HeaderRightIcon = () => {
   const { isDarkmode, setTheme } = useTheme();
 
   const [modalVisible, setModalVisible] = useState(false);
@@ -149,5 +150,23 @@ const HeaderIcon = () => {
     </View>
   );
 };
+const HeaderLeftIcon = () => {
+  const { isDarkmode, setTheme } = useTheme();
+  const navigation = useNavigation();
+  const [modalVisible, setModalVisible] = useState(false);
 
-export { HeaderIcon, HeaderTitle };
+  return (
+    <View>
+      <TouchableOpacity onPress={() => navigation.goBack()}>
+        <MaterialIcons
+          style={{ justifyContent: "flex-end" }}
+          name="chevron-left"
+          size={30}
+          color={isDarkmode ? themeColor.white : themeColor.black200}
+        />
+      </TouchableOpacity>
+    </View>
+  );
+};
+
+export { HeaderRightIcon as HeaderIcon, HeaderLeftIcon, HeaderTitle };
